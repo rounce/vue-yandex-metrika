@@ -48,21 +48,6 @@ export function createMetrika (Vue) {
 
         // Mock metrika
         console.warn('[vue-yandex-metrika] Tracking is disabled, because env option is not "production"')
-        if (config.debug) {console.warn('[vue-yandex-metrika] DEBUG is true: you\'ll see all API calls in the console')}
-
-        return Vue.prototype.$metrika = Vue.$metrika = {
-            addFileExtension() {if (config.debug) {console.log('[vue-yandex-metrika] addFileExtension:', arguments)}},
-            extLink() {if (config.debug) {console.log('[vue-yandex-metrika] extLink:', arguments)}},
-            file() {if (config.debug) {console.log('[vue-yandex-metrika] file:', arguments)}},
-            getClientID() {if (config.debug) {console.log('[vue-yandex-metrika] getClientID:', arguments)}},
-            hit() {if (config.debug) {console.log('[vue-yandex-metrika] hit:', arguments)}},
-            notBounce() {if (config.debug) {console.log('[vue-yandex-metrika] notBounce:', arguments)}},
-            params() {if (config.debug) {console.log('[vue-yandex-metrika] params:', arguments)}},
-            reachGoal() {if (config.debug) {console.log('[vue-yandex-metrika] reachGoal:', arguments)}},
-            replacePhones() {if (config.debug) {console.log('[vue-yandex-metrika] replacePhones:', arguments)}},
-            setUserID() {if (config.debug) {console.log('[vue-yandex-metrika] setUserID:', arguments)}},
-            userParam() {if (config.debug) {console.log('[vue-yandex-metrika] userParam:', arguments)}}
-        }
     }
 }
 
